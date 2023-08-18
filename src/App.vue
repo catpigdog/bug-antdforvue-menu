@@ -60,7 +60,7 @@ const menus = computed(() => [
   }
 ])
 
-// menus.value  // 触发下menus.value就
+// menus.value  // 触发下menus.value就没问题
 
 const toggleCollapsed = () => {
   state.collapsed = !state.collapsed;

@@ -28,31 +28,31 @@ const state = reactive({
 
 const menus = computed(() => [
   {
-    name: 'key1',
+    key: 'key1',
     title: 'test1',
     icon: () => createVNode(HomeFilled),
     label: 'test1',
     children: [
       {
-        name: 'key1-1',
+        key: 'key1-1',
         title: 'test1-1',
         label: createVNode(HomeFilled) // 用图标组件代替 实际情况是RouterLink组件
       }
     ]
   },
   {
-    name: 'key2',
+    key: 'key2',
     title: 'test2',
     icon: () => createVNode(AccountBookFilled),
     label: 'test2',
     children: [
       {
-        name: 'key2-1',
+        key: 'key2-1',
         title: 'test2-1',
         label: createVNode(AccountBookFilled)
       },
       {
-        name: 'key2-2',
+        key: 'key2-2',
         title: 'test2-2',
         label: createVNode(AccountBookFilled)
       }
@@ -60,7 +60,7 @@ const menus = computed(() => [
   }
 ])
 
-// menus.value  // 触发下menus.value就
+// menus.value  // 触发下menus.value就可以
 
 const toggleCollapsed = () => {
   state.collapsed = !state.collapsed;
